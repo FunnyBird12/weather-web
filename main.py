@@ -29,7 +29,7 @@ def home(request:Request):
 
 @app.get("/weather")
 async def response(city:str,today:str):
-    API_KEY = "K8NZJ2PGQBYFYAHX6VXBD3CJY"
+    API_KEY = ""#Enter your api key
     URL = (f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/"f"timeline/{city}/{today}/{today}"f"?unitGroup=metric&key={API_KEY}&contentType=json")
 
     async with httpx.AsyncClient() as client:
